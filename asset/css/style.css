@@ -1,0 +1,159 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100%;
+	margin: 0;
+	font-family: VT323, monospace;
+}
+
+.backgroundImage {
+	background-image: url("../images/arcadeBackground.png");
+	background-size: cover;
+	height: 100vh;
+	overflow-y: hidden;
+	bottom: 5%;
+}
+
+img {
+	max-width: 100%;
+}
+
+img:hover {
+	cursor: pointer;
+}
+
+ .closed {
+	opacity: 0;
+	transition: .25s;
+}
+
+.open {
+	opacity: 1 !important;
+}
+
+.stayOpen {
+	opacity: 1 !important;
+}
+
+.container {
+	height: 100vh;
+	width: 40vw;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 1.5rem;
+	justify-items: center;
+	align-content: center;
+}
+
+.openingTitle {
+	grid-column: 1 / -1;
+	font-size: 4rem;
+	margin-bottom: 5rem;
+}
+
+.title {
+	grid-column: 1 / -1;
+	grid-row-start: 1;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+
+}
+
+.tiles {
+	width: 120px;
+	height: 120px;
+	background: #2980b9;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(#2c3e50, #2980b9);
+	background: -o-linear-gradient(#2c3e50, #2980b9);
+	background: linear-gradient(#2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	border-radius: 10px;
+	transition:all 0.25s;
+}
+
+.tiles:hover {
+	box-shadow: 0 5px 5px 2px gray;
+}
+
+.score {
+	color: red;
+	font-size: 3rem;
+	margin: 0;
+	margin-bottom: 5rem;
+	grid-column: 1 / -1;
+}
+
+.playButton {
+	grid-column: 1 / -1;
+   background: #56BBF6;
+   background-image: -webkit-linear-gradient(top, #56BBF6, #1E62D0);
+   background-image: -moz-linear-gradient(top, #56BBF6, #1E62D0);
+   background-image: -ms-linear-gradient(top, #56BBF6, #1E62D0);
+   background-image: -o-linear-gradient(top, #56BBF6, #1E62D0);
+   background-image: linear-gradient(to bottom, #56BBF6, #1E62D0);
+   color: #FFFFFF;
+   font-family: inherit;
+   font-size: 40px;
+   padding: 2rem;
+   box-shadow: 0px 9px 10px 0px #969696;
+   -webkit-box-shadow: 0px 9px 10px 0px #969696;
+   -moz-box-shadow: 0px 9px 10px 0px #969696;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+}
+
+.playButton:hover {
+   background: #1E62D0;
+   background-image: -webkit-linear-gradient(top, #1E62D0, #56BBF6);
+   background-image: -moz-linear-gradient(top, #1E62D0, #56BBF6);
+   background-image: -ms-linear-gradient(top, #1E62D0, #56BBF6);
+   background-image: -o-linear-gradient(top, #1E62D0, #56BBF6);
+   background-image: linear-gradient(to bottom, #1E62D0, #56BBF6);
+   text-decoration: none;
+}
+
+@media (max-width : 1000px) {
+	.backgroundImage {
+		background: #ddd6f3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #faaca8, #ddd6f3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #faaca8, #ddd6f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	}
+
+	.container {
+		width: 100vw;
+	}
+}
+
+@media (max-width : 450px) {
+
+	.tiles {
+		height: 75px;
+		width: 75px;
+	}
+
+	.openingTitle {
+		text-align: center;
+	}
+
+}
+
+@media (max-width : 450px) {
+
+	.tiles {
+		height: 60px;
+		width: 60px;
+	}
+
+	.container {
+		width: 100vw;
+	}
+
+	.openingTitle {
+		text-align: center;
+	}
+
+}
